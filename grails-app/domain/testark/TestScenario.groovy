@@ -2,12 +2,12 @@ package testark
 
 class TestScenario {
 
-    String name, story
-    String step, actual_result
+    String story
+    String name
+    static hasMany = [steps: Step]
 
     static constraints = {
         name(nullable: false, blank: false, unique: true)
-        step(nullable: false, blank: false)
-        actual_result(nullable: false, blank: false)
+        story(nullable: true, blank: true)
     }
 }
